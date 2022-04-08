@@ -6,4 +6,29 @@
     android:layout_height="match_parent"
     tools:context=".didntpay">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+          android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="20dp"
+            android:text="no tiene acceso ha este apartado por favor realize su pago
+e intente de nuevo 😁😁😁"
+            android:textSize="30dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/salir"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/txt"
+            android:text="Regresar"/>
+    </RelativeLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
