@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "96594778565",
+    "project_id": "ininem-2b6bc",
+    "storage_bucket": "ininem-2b6bc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:96594778565:android:9ab87c93afa027436d53ac",
+        "android_client_info": {
+          "package_name": "com.ininem.ininemapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "96594778565-oef07d4hdp1v0e40g8df78e0ebvfivcq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAL_fthjjLCI9jrdxzO-PcrKWD5IAxiXhs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "96594778565-oef07d4hdp1v0e40g8df78e0ebvfivcq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:96594778565:android:9e032731d6da9ed46d53ac",
+        "android_client_info": {
+          "package_name": "com.smallacademy.userroles"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "96594778565-oef07d4hdp1v0e40g8df78e0ebvfivcq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAL_fthjjLCI9jrdxzO-PcrKWD5IAxiXhs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "96594778565-oef07d4hdp1v0e40g8df78e0ebvfivcq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
