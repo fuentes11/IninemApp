@@ -48,29 +48,30 @@ public class Updateusers extends AppCompatActivity implements View.OnClickListen
 
         editTextName.setText(product.getNombre_completo());
         editTextBrand.setText(product.getCorreo_electronico());
-        editTextDesc.setText(product.getisUser());
+        editTextDesc.setText(product.getIsUser());
 
 
 
         findViewById(R.id.button_update).setOnClickListener(this);
         findViewById(R.id.button_delete).setOnClickListener(this);
+        findViewById(R.id.regresar).setOnClickListener(this);
     }
 
     private boolean hasValidationErrors(String Nombre_completo, String Correo_electronico, String isUser) {
         if (Nombre_completo.isEmpty()) {
-            editTextName.setError("Name required");
+            editTextName.setError("ingrese un nombre");
             editTextName.requestFocus();
             return true;
         }
 
         if (Correo_electronico.isEmpty()) {
-            editTextBrand.setError("Brand required");
+            editTextBrand.setError("ingrese un correo");
             editTextBrand.requestFocus();
             return true;
         }
 
         if (isUser.isEmpty()) {
-            editTextDesc.setError("Description required");
+            editTextDesc.setError("ingrese un valor");
             editTextDesc.requestFocus();
             return true;
         }
@@ -96,7 +97,7 @@ public class Updateusers extends AppCompatActivity implements View.OnClickListen
             db.collection("users").document(product.getId())
                     .update(
                             "Correo_electronico", p.getCorreo_electronico(),
-                            "isUser", p.getisUser(),
+                            "isUser", p.getIsUser(),
                             "Nombre_completo", p.getNombre_completo()
 
                     )

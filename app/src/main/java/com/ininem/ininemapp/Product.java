@@ -1,12 +1,14 @@
 package com.ininem.ininemapp;
 
+
 import com.google.firebase.firestore.Exclude;
 
 import java.io.Serializable;
 
-public class Product implements Serializable{
+public class Product implements Serializable {
 
-    @Exclude private String id;
+    @Exclude
+    private String id;
 
     private String Nombre_completo, Correo_electronico, isUser;
 
@@ -34,14 +36,23 @@ public class Product implements Serializable{
         return Nombre_completo;
     }
 
+    public void setNombre_completo(String nombre_completo) {
+        Nombre_completo = nombre_completo;
+    }
+
     public String getCorreo_electronico() {
         return Correo_electronico;
     }
 
-    public String getisUser() {
+    public void setCorreo_electronico(String correo_electronico) {
+        Correo_electronico = correo_electronico;
+    }
+
+    public String getIsUser() {
         return isUser;
     }
 
-
-
+    public void setIsUser(String isUser) {
+        this.isUser = isUser;
+    }
 }

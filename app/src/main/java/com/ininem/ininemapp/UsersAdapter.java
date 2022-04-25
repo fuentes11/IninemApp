@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.ProductViewHolder> {
+public class    UsersAdapter extends RecyclerView.Adapter<UsersAdapter.ProductViewHolder> {
 
     private Context mCtx;
     private List<Product> productList;
@@ -36,7 +36,7 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.ProductViewH
 
         holder.textViewName.setText(product.getNombre_completo());
         holder.textViewBrand.setText(product.getCorreo_electronico());
-        holder.textViewDesc.setText(product.getisUser());
+        holder.textViewDesc.setText(product.getIsUser());
 
     }
 

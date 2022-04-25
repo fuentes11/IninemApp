@@ -48,29 +48,9 @@ public class Register extends AppCompatActivity {
         registerBtn = findViewById(R.id.registerBtn);
         goToLogin = findViewById(R.id.gotoLogin);
         USER = findViewById(R.id.isStudent);
-        ADMIN=findViewById(R.id.isTeacher);
 
         settings = new FirebaseFirestoreSettings.Builder().setPersistenceEnabled(true).build();
         fStore.setFirestoreSettings(settings);
-
-        USER.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (
-                        compoundButton.isChecked()){
-                    ADMIN.setChecked(false);
-                }
-            }
-        });
-        ADMIN.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (compoundButton.isChecked()){
-                    USER.setChecked(false);
-                }
-            }
-        });
-
 
 
         registerBtn.setOnClickListener(new View.OnClickListener() {
@@ -80,7 +60,7 @@ public class Register extends AppCompatActivity {
                 checkField(email);
                 checkField(password);
 
-                if (!(ADMIN.isChecked()||USER.isChecked())){
+                if (!(USER.isChecked())){
                     Toast.makeText(Register.this, "Seleccione un tipo de cuenta", Toast.LENGTH_SHORT).show();
 
                 }
@@ -96,18 +76,12 @@ public class Register extends AppCompatActivity {
                                     Map<String,Object> userInfo=new HashMap<>();
                                     userInfo.put("Nombre_completo",fullName.getText().toString());
                                     userInfo.put("Correo_electronico",email.getText().toString());
-                                    if (ADMIN.isChecked())
-                                    {
-                                        userInfo.put("isAdmin",1);
-                                    }
                                     if (USER.isChecked()){
-                                        userInfo.put("isUSer",1);
+                                        userInfo.put("isUSer","1");
 
                                     }
-                                    if (ADMIN.isChecked()){
-                                        startActivity(new Intent(getApplicationContext(),Admin.class));
+                                    df.set(userInfo);
 
-                                    }
                                     if (USER.isChecked()){
                                         startActivity(new Intent(getApplicationContext(),MainActivity.class));
                                     }

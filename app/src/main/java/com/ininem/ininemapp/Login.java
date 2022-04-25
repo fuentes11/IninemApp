@@ -88,12 +88,13 @@ public class Login extends AppCompatActivity {
                 if (documentSnapshot.getString("isAdmin")!=null){
                     startActivity(new Intent(getApplicationContext(),Admin.class));
                     finish();
-                }if (documentSnapshot.getString("isUser")=="1"){
+                }if (documentSnapshot.getString("isUser")!=null && documentSnapshot.getString("isUser").equals("1")){
                     startActivity(new Intent(getApplicationContext(),MainActivity.class));
                     finish();
-                }else{
+                }
+                if (documentSnapshot.getString("isUser")!=null && documentSnapshot.getString("isUser").equals("0")){
                     startActivity(new Intent(getApplicationContext(),didntpay.class));
-
+                    finish();
                 }
 
             }
@@ -120,12 +121,13 @@ public class Login extends AppCompatActivity {
             df.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                 @Override
                 public void onSuccess(DocumentSnapshot documentSnapshot) {
-                    if(documentSnapshot.getString("isUser")=="1"){
+                    if (documentSnapshot.getString("isUser")!=null && documentSnapshot.getString("isUser").equals("1")){
                         startActivity(new Intent(getApplicationContext(),MainActivity.class));
                         finish();
                     }
-                    else{
+                    if (documentSnapshot.getString("isUser")!=null && documentSnapshot.getString("isUser").equals("0")){
                         startActivity(new Intent(getApplicationContext(),didntpay.class));
+                        finish();
                     }
                     if(documentSnapshot.getString("isAdmin")!=null){
                         startActivity(new Intent(getApplicationContext(),Admin.class));
